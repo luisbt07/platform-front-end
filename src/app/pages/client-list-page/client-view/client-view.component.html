@@ -1,14 +1,4 @@
 <div class="container-clientes">
-
-  <nav class="sidebar">
-    <div class="logo">
-      <img class="logo" src="assets/logo-white.png" alt="Logo">
-    </div>
-    <a routerLink="home" routerLinkActive="active">Main</a>
-    <a routerLink="view" routerLinkActive="active">View</a>
-    <a routerLink="report" routerLinkActive="active">Report</a>
-  </nav>
-
   <main class="content">
     <header class="header">
       <h1>Listagem de Clientes</h1>
@@ -34,14 +24,16 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let cliente of clientes">
-          <td><input type="checkbox" /></td>
-          <td>{{ cliente.nome }}</td>
-          <td>{{ cliente.cnpj }}</td>
-          <td>{{ cliente.ciclo }}</td>
-          <td>{{ cliente.docs }}</td>
-          <td>{{ cliente.criadoEm }}</td>
-          <td><a href="#">✏️</a></td>
+          <tr>
+              @for(cliente of clientes; track $index) {
+                  <td><input type="checkbox" /></td>
+                  <td>{{ cliente.nome }}</td>
+                  <td>{{ cliente.cnpj }}</td>
+                  <td>{{ cliente.ciclo }}</td>
+                  <td>{{ cliente.docs }}</td>
+                  <td>{{ cliente.criadoEm }}</td>
+                  <td><a href="#">✏️</a></td>
+              }
         </tr>
       </tbody>
     </table>
