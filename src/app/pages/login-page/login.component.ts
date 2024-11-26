@@ -21,7 +21,7 @@ export class LoginComponent {
     // Mock de validação de login
     if (this.username === 'admin' && this.password === ' ') {
       this.message = 'Login válido! Site acessado.';
-      this.router.navigate(['/home'])
+      this.router.navigate(['/app/home'])
     } else {
       this.message = 'Login inválido! Verifique as informações e tente novamente.';
     }
