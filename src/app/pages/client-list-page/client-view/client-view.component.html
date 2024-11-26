@@ -1,0 +1,41 @@
+<div class="container-clientes">
+  <main class="content">
+    <header class="header">
+      <h1>Listagem de Clientes</h1>
+      <div class="search-bar">
+        <input type="text" placeholder="Nome, ID ou CNPJ" />
+      </div>
+      <div class="profile">
+        <span>Oberon Shaw, MCH</span>
+        <p>Gerente Financeiro Geral</p>
+      </div>
+    </header>
+    <div class="alert">Cliente não encontrado!</div>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Nome</th>
+          <th>CNPJ</th>
+          <th>Ciclo</th>
+          <th>Docs</th>
+          <th>Criado Em</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+              @for(cliente of clientes; track $index) {
+                  <td><input type="checkbox" /></td>
+                  <td>{{ cliente.nome }}</td>
+                  <td>{{ cliente.cnpj }}</td>
+                  <td>{{ cliente.ciclo }}</td>
+                  <td>{{ cliente.docs }}</td>
+                  <td>{{ cliente.criadoEm }}</td>
+                  <td><a href="#">✏️</a></td>
+              }
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</div>

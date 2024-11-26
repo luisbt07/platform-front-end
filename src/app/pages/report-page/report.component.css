@@ -1,0 +1,41 @@
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.report-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.chart {
+  height: 200px;
+  background-color: #e0e0e0;
+  margin: 20px 0;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot.mensal {
+  background-color: #6574cd;
+}
+
+.dot.quinzenal {
+  background-color: #a3bffa;
+}
+
+.dot.semanal {
+  background-color: #e0e7ff;
+}

@@ -1,0 +1,15 @@
+/* Layout container */
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Prevents unnecessary scrollbars */
+}
+
+/* Sidebar */
+app-side-bar-menu {
+    width: 154px; /* Keep consistent width */
+    background: #043873;
+    height: 100vh; /* Full height */
+    padding: 20px 0;
+}
+
