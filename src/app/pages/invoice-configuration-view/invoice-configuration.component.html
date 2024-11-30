@@ -1,0 +1,40 @@
+<div class="container-invoice">
+  <main class="content">
+    <div class="search-bar">
+      <form (ngSubmit)="onSubmitQuery()">
+        <input type="text" name="inputData" placeholder="ID ou CNPJ" [(ngModel)]="inputData"/>
+        <button type="submit"> query </button>
+      </form>
+    </div>
+     @if(showConfigs) {
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>CompanyId</th>
+            <th>Billing Cycle</th>
+            <th>ActivationDate</th>
+            <th>Fiscal Documents</th>
+            <th>Edit</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for(config of configs; track $index) {
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td>{{ config.companyId }}</td>
+                <td>{{ config.billingCycle }}</td>
+                <td>{{ config.activationDateTime | date: "fullDate"  }}</td>
+                <td>
+                  @for(doc of config.fiscalDocuments; track $index) {
+                      {{config.fiscalDocuments.length == $index + 1 ? doc : doc + " | "}}
+                  }
+                </td>
+                <td><a href="#">✏️</a></td>
+          </tr>
+        }
+        </tbody>
+      </table>
+     }
+  </main>
+</div>
