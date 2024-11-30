@@ -48,20 +48,7 @@ body {
 }
 
 /* Cabeçalho */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-}
 
-.header h1 {
-  margin: 0;
-}
-
-.user-info {
-  text-align: right;
-}
 
 /* Gerenciamento */
 .management {
@@ -114,23 +101,4 @@ body {
   height: 50px;
   border-radius: 50%;
 }
-.user-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
 
-.user-details {
-  display: flex;
-  flex-direction: column;
-}
-
-.user-name {
-  font-weight: bold;
-  color: #043873;
-}
-
-.user-role {
-  font-size: 14px;
-  color: #7a7a7a;
-}
