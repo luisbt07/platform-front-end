@@ -12,7 +12,6 @@ export class InvoiceConfigurationService {
 
     getInvoiceConfigurations(input: string): InvoiceConfiguration[] | string {
         let filteredConfigs: InvoiceConfiguration[] = []
-        debugger
         if (InputValidator.isValidCnpj(input)) {
             let cleanedCnpj = input.replace(/\D/g, '');
             const company = this.companyService.getCompanyByCnpj(cleanedCnpj)
