@@ -9,10 +9,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Client Configuration';
+  title = 'Desenvolvimento Web Frontend';
   userAuthenticated: boolean = false;
-
-  onLoggedUser() {
-    this.userAuthenticated = true;
-  }
+  
 }

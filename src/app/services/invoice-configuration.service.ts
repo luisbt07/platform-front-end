@@ -26,7 +26,7 @@ export class InvoiceConfigurationService {
             let companyId: number = Number(input)
             filteredConfigs = this.retrieveInvoiceConfigsByCompanyId(companyId)
         }
-        
+
         return filteredConfigs.length > 0 ? filteredConfigs : "No configuration for this company"
     }
 
