@@ -1,6 +1,7 @@
 .container-invoice {
   display: flex;
   height: 100vh;
+  background-color: #f6f4f4;
 }
 
 .content {

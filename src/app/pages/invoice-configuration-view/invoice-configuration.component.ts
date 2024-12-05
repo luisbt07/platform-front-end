@@ -4,11 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { InvoiceConfigurationService } from '../../services/invoice-configuration.service';
 import { InvoiceConfigurationMapper } from './invoice-configuration-class';
 import { InvoiceConfigData, InvoiceConfiguration } from './invoice-configuration.model';
+import { SideBarMenuComponent } from "../../layout/side-bar-menu/side-bar-menu.component";
 
 @Component({
   selector: 'app-invoice-configuration',
   standalone: true,
-  imports: [DatePipe, FormsModule],
+  imports: [DatePipe, FormsModule, SideBarMenuComponent],
   templateUrl: './invoice-configuration.component.html',
   styleUrl: './invoice-configuration.component.css'
 })
@@ -44,5 +45,5 @@ export class InvoiceConfigurationComponent {
     this.titleEvent.emit("Invoice Configuration View")
   }
 
-  
+
 }

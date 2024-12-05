@@ -1,11 +1,13 @@
 <div class="container-invoice">
+  <app-side-bar-menu></app-side-bar-menu>
   <main class="content">
+
     <div class="search-bar">
-      <form (ngSubmit)="onSubmitQuery()">
-        <input type="text" name="inputData" placeholder="ID ou CNPJ" [(ngModel)]="inputData"/>
-        <button type="submit"> query </button>
+      <form (ngSubmit)="onSubmitQuery()" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+        <input type="search" class="form-control form-control-white text-bg-white" placeholder="Pesquise pelo CNPJ ou ID" aria-label="Search"name="inputData" [(ngModel)]="inputData"/>
       </form>
     </div>
+
      @if(showConfigs) {
       <table>
         <thead>

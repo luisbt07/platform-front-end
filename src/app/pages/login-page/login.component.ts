@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -18,9 +18,7 @@ export class LoginComponent {
   constructor(private router : Router) {}
 
   onLogin() {
-    // Mock de validação de login
-    if (this.username === 'admin' && this.password === ' ') {
-      this.message = 'Login válido! Site acessado.';
+    if (this.username === 'admin@gmail.com' && this.password === 'admin') {
       this.router.navigate(['/app/home'])
     } else {
       this.message = 'Login inválido! Verifique as informações e tente novamente.';
