@@ -9,7 +9,8 @@
       { "id": 7, "cnpj": "51498088000154", "name": "Eta Digital Solutions" },
       { "id": 8, "cnpj": "71547574000122", "name": "Theta Construction LLC" },
       { "id": 9, "cnpj": "28936996000160", "name": "Iota Energy Providers" },
-      { "id": 10, "cnpj": "44099337000173", "name": "Kappa Food Supplies" }
+      { "id": 10, "cnpj": "44099337000173", "name": "Kappa Food Supplies" },
+      { "id": 11, "cnpj": "47938916000150", "name": "Company Sem Configuração" } 
     ],
     "invoiceConfigurations": [
       {

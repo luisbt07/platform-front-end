@@ -1,25 +1,28 @@
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { INVOICE_CONFIGURATIONS } from "../pages/invoice-configuration-view/dummy-invoice-configs";
+import { map, Observable } from "rxjs";
 import { type InvoiceConfiguration } from "../pages/invoice-configuration-view/invoice-configuration.model";
 
 @Injectable({providedIn: 'root'})
 export class InvoiceConfigurationService {
-    private configurations = INVOICE_CONFIGURATIONS
-
-    getInvoiceConfigurations(companyId: number): InvoiceConfiguration[] | string {
-        let filteredConfigs: InvoiceConfiguration[] = []
-
-        filteredConfigs = this.retrieveInvoiceConfigsByCompanyId(companyId)
-
-        return filteredConfigs.length > 0 ? filteredConfigs : "No configuration for this company"
+    url = "http://localhost:3000"
+    constructor(private client: HttpClient) {
     }
 
-    retrieveInvoiceConfigsByCompanyId(companyId: number): InvoiceConfiguration[] {
-        return this.configurations.filter(
-            (config) => config.companyId === companyId
-        ).sort(
-            (a, b) => new Date(b.activationDateTime).getTime() - new Date(a.activationDateTime).getTime()
-        ).slice(0, 3); // Get the three most recent configurations
+    getInvoiceConfigurations(companyId: number): Observable<InvoiceConfiguration[] | string> {
+        return this.retrieveInvoiceConfigsByCompanyId(companyId).pipe(
+            map(configurations => {
+                const sortedConfigs = configurations.sort(
+                (a, b) => new Date(b.activationDateTime).getTime() - new Date(a.activationDateTime).getTime()
+                ).slice(0, 3); // Get the three most recent configurations
+        
+                return sortedConfigs.length > 0 ? sortedConfigs : "No configuration for this company";
+            }),
+        )
+    }
+
+    retrieveInvoiceConfigsByCompanyId(companyId: number): Observable<InvoiceConfiguration[]> {
+        return this.client.get<InvoiceConfiguration[]>(`${this.url}/invoiceConfigurations/?companyId=${companyId}`);
     }
 
 }

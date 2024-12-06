@@ -19,17 +19,16 @@ export class CompanyService {
 
     getCompanyId(input: string): Observable<number | string> {
         if (InputValidator.isValidCnpj(input)) {
-            debugger
             let cleanedCnpj = input.replace(/\D/g, '');
             return this.getCompanyByCnpj(cleanedCnpj).pipe(
-                map((companies) => companies.length > 0 ? Number(companies[0].id) : `No Company with this id: ${input}`)
+                map((companies) => companies.length > 0 ? Number(companies[0].id) : `No Company with this cnpj: ${input}`)
             );          
         }
         else if (InputValidator.isValidCompanyId(input)) {
             return of(Number(input));
         }
         else {
-            return of(`No Company with this cnpj: ${input}`)
+            return of(`No Company with this id: ${input}`)
         }
     }
 }
