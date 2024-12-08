@@ -1,4 +1,4 @@
-import { DatePipe } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { of, switchMap } from 'rxjs';
@@ -7,11 +7,12 @@ import { CompanyService } from '../../services/company.service';
 import { InvoiceConfigurationService } from '../../services/invoice-configuration.service';
 import { InvoiceConfigurationMapper } from './invoice-configuration-class';
 import { InvoiceConfigData, InvoiceConfiguration } from './invoice-configuration.model';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-invoice-configuration',
   standalone: true,
-  imports: [DatePipe, FormsModule, SideBarMenuComponent],
+  imports: [DatePipe, FormsModule, SideBarMenuComponent, RouterLink, RouterOutlet],
   templateUrl: './invoice-configuration.component.html',
   styleUrl: './invoice-configuration.component.css'
 })
@@ -57,8 +58,8 @@ export class InvoiceConfigurationComponent {
           this.showConfigs = true;
         }
       }
-    }); 
-    
+    });
+
   }
   sendTitle() {
     this.titleEvent.emit("Invoice Configuration View")
