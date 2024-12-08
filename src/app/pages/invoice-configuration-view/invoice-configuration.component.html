@@ -3,13 +3,20 @@
   <main class="content">
 
     <div class="search-bar">
-      <form (ngSubmit)="onSubmitQuery()" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-        <input type="search" class="form-control form-control-white text-bg-white" placeholder="Pesquise pelo CNPJ ou ID" aria-label="Search"name="inputData" [(ngModel)]="inputData"/>
+      <form (ngSubmit)="onSubmitQuery()" class="d-flex col-12 col-lg-auto mb-3 mb-lg-0 align-items-center" role="search">
+        <input type="search"
+          class="form-control form-control-white text-bg-white me-3 py-2 px-3"
+          placeholder="Pesquise pelo CNPJ ou ID"
+          aria-label="Search"
+          name="inputData"
+          [(ngModel)]="inputData"
+        />
+        <button class="btn btn-outline-success px-4 py-2" type="submit">Search</button>
       </form>
     </div>
 
      @if(showConfigs) {
-      <table>
+      <table class="table table-hover">
         <thead>
           <tr>
             <th></th>
@@ -32,11 +39,13 @@
                       {{config.fiscalDocuments.length == $index + 1 ? doc : doc + " | "}}
                   }
                 </td>
-                <td><a href="#">✏️</a></td>
+                <td><button [routerLink]="'/app/invoice-configuration/client-config'" class="btn">✏️</button></td>
           </tr>
         }
         </tbody>
       </table>
      }
+
+     <router-outlet></router-outlet>
   </main>
 </div>

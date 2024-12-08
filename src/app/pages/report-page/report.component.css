@@ -1,0 +1,21 @@
+.container-report {
+  display: flex;
+  height: 100vh;
+  background-color: #f6f4f4;
+}
+
+.content {
+  width: 150%;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  margin-top: 20px;
+  max-width: 400px;
+  max-height: 400px;
+}
