@@ -1,137 +1,157 @@
 {
-    "companies": [
-      { "id": 1, "cnpj": "87757416000137", "name": "Alpha Solutions LTDA" },
-      { "id": 2, "cnpj": "12735163000100", "name": "Beta Enterprises S/A" },
-      { "id": 3, "cnpj": "18831678000181", "name": "Gamma Tech Innovations" },
-      { "id": 4, "cnpj": "31961775000157", "name": "Delta Logistics Group" },
-      { "id": 5, "cnpj": "64108330000188", "name": "Epsilon Financial Services" },
-      { "id": 6, "cnpj": "97602494000116", "name": "Zeta Manufacturing Co." },
-      { "id": 7, "cnpj": "51498088000154", "name": "Eta Digital Solutions" },
-      { "id": 8, "cnpj": "71547574000122", "name": "Theta Construction LLC" },
-      { "id": 9, "cnpj": "28936996000160", "name": "Iota Energy Providers" },
-      { "id": 10, "cnpj": "44099337000173", "name": "Kappa Food Supplies" },
-      { "id": 11, "cnpj": "47938916000150", "name": "Company Sem Configuração" } 
-    ],
-    "invoiceConfigurations": [
-      {
-        "companyId": 1,
-        "activationDateTime": "2024-10-20T10:00:00Z",
-        "billingCycle": "Mensal",
-        "fiscalDocuments": ["InvoiceReport", "CteZip"]
-      },
-      {
-        "companyId": 1,
-        "activationDateTime": "2024-12-01T15:00:00Z",
-        "billingCycle": "Custom",
-        "fiscalDocuments": ["NfseZip"]
-      },
-      {
-        "companyId": 2,
-        "activationDateTime": "2024-09-15T12:00:00Z",
-        "billingCycle": "Quinzenal",
-        "fiscalDocuments": ["InvoiceReport", "CteZip"]
-      },
-      {
-        "companyId": 2,
-        "activationDateTime": "2024-11-25T14:00:00Z",
-        "billingCycle": "Mensal",
-        "fiscalDocuments": ["NfseZip"]
-      },
-      {
-        "companyId": 3,
-        "activationDateTime": "2024-08-10T09:30:00Z",
-        "billingCycle": "Custom",
-        "fiscalDocuments": ["CteZip"]
-      },
-      {
-        "companyId": 3,
-        "activationDateTime": "2024-12-10T11:30:00Z",
-        "billingCycle": "Quinzenal",
-        "fiscalDocuments": ["InvoiceReport", "NfseZip"]
-      },
-      {
-        "companyId": 4,
-        "activationDateTime": "2024-07-01T10:45:00Z",
-        "billingCycle": "Mensal",
-        "fiscalDocuments": ["InvoiceReport", "CteZip"]
-      },
-      {
-        "companyId": 4,
-        "activationDateTime": "2024-12-15T16:00:00Z",
-        "billingCycle": "Custom",
-        "fiscalDocuments": ["NfseZip"]
-      },
-      {
-        "companyId": 5,
-        "activationDateTime": "2024-09-20T14:30:00Z",
-        "billingCycle": "Quinzenal",
-        "fiscalDocuments": ["CteZip", "NfseZip"]
-      },
-      {
-        "companyId": 5,
-        "activationDateTime": "2024-12-22T13:00:00Z",
-        "billingCycle": "Mensal",
-        "fiscalDocuments": ["InvoiceReport"]
-      },
-      {
-        "companyId": 6,
-        "activationDateTime": "2024-08-30T11:00:00Z",
-        "billingCycle": "Custom",
-        "fiscalDocuments": ["NfseZip", "CteZip"]
-      },
-      {
-        "companyId": 6,
-        "activationDateTime": "2024-12-25T12:00:00Z",
-        "billingCycle": "Quinzenal",
-        "fiscalDocuments": ["InvoiceReport"]
-      },
-      {
-        "companyId": 7,
-        "activationDateTime": "2024-10-05T08:00:00Z",
-        "billingCycle": "Mensal",
-        "fiscalDocuments": ["CteZip", "InvoiceReport"]
-      },
-      {
-        "companyId": 7,
-        "activationDateTime": "2024-12-28T17:00:00Z",
-        "billingCycle": "Custom",
-        "fiscalDocuments": ["NfseZip"]
-      },
-      {
-        "companyId": 8,
-        "activationDateTime": "2024-09-12T09:15:00Z",
-        "billingCycle": "Quinzenal",
-        "fiscalDocuments": ["InvoiceReport"]
-      },
-      {
-        "companyId": 8,
-        "activationDateTime": "2024-12-03T10:00:00Z",
-        "billingCycle": "Mensal",
-        "fiscalDocuments": ["NfseZip", "CteZip"]
-      },
-      {
-        "companyId": 9,
-        "activationDateTime": "2024-07-15T07:30:00Z",
-        "billingCycle": "Custom",
-        "fiscalDocuments": ["CteZip", "NfseZip"]
-      },
-      {
-        "companyId": 9,
-        "activationDateTime": "2024-11-30T15:45:00Z",
-        "billingCycle": "Quinzenal",
-        "fiscalDocuments": ["InvoiceReport"]
-      },
-      {
-        "companyId": 10,
-        "activationDateTime": "2024-10-10T10:45:00Z",
-        "billingCycle": "Mensal",
-        "fiscalDocuments": ["InvoiceReport", "CteZip"]
-      },
-      {
-        "companyId": 10,
-        "activationDateTime": "2024-12-29T18:30:00Z",
-        "billingCycle": "Custom",
-        "fiscalDocuments": ["NfseZip"]
-      }
-    ]
-  }
+  "companies": [
+    { "id": 1, "cnpj": "87757416000137", "name": "Alpha Solutions LTDA" },
+    { "id": 2, "cnpj": "12735163000100", "name": "Beta Enterprises S/A" },
+    { "id": 3, "cnpj": "18831678000181", "name": "Gamma Tech Innovations" },
+    { "id": 4, "cnpj": "31961775000157", "name": "Delta Logistics Group" },
+    { "id": 5, "cnpj": "64108330000188", "name": "Epsilon Financial Services" },
+    { "id": 6, "cnpj": "97602494000116", "name": "Zeta Manufacturing Co." },
+    { "id": 7, "cnpj": "51498088000154", "name": "Eta Digital Solutions" },
+    { "id": 8, "cnpj": "71547574000122", "name": "Theta Construction LLC" },
+    { "id": 9, "cnpj": "28936996000160", "name": "Iota Energy Providers" },
+    { "id": 10, "cnpj": "44099337000173", "name": "Kappa Food Supplies" },
+    { "id": 11, "cnpj": "47938916000150", "name": "Company Sem Configuração" }
+  ],
+  "invoiceConfigurations": [
+    {
+      "id": 1,
+      "companyId": 1,
+      "activationDateTime": "2024-10-20T10:00:00Z",
+      "billingCycle": "Mensal",
+      "fiscalDocuments": ["InvoiceReport", "CteZip"]
+    },
+    {
+      "id": 2,
+      "companyId": 1,
+      "activationDateTime": "2024-12-01T15:00:00Z",
+      "billingCycle": "Custom",
+      "fiscalDocuments": ["NfseZip"]
+    },
+    {
+      "id": 3,
+      "companyId": 2,
+      "activationDateTime": "2024-09-15T12:00:00Z",
+      "billingCycle": "Quinzenal",
+      "fiscalDocuments": ["InvoiceReport", "CteZip"]
+    },
+    {
+      "id": 4,
+      "companyId": 2,
+      "activationDateTime": "2024-11-25T14:00:00Z",
+      "billingCycle": "Mensal",
+      "fiscalDocuments": ["NfseZip"]
+    },
+    {
+      "id": 5,
+      "companyId": 3,
+      "activationDateTime": "2024-08-10T09:30:00Z",
+      "billingCycle": "Custom",
+      "fiscalDocuments": ["CteZip"]
+    },
+    {
+      "id": 6,
+      "companyId": 3,
+      "activationDateTime": "2024-12-10T11:30:00Z",
+      "billingCycle": "Quinzenal",
+      "fiscalDocuments": ["InvoiceReport", "NfseZip"]
+    },
+    {
+      "id": 7,
+      "companyId": 4,
+      "activationDateTime": "2024-07-01T10:45:00Z",
+      "billingCycle": "Mensal",
+      "fiscalDocuments": ["InvoiceReport", "CteZip"]
+    },
+    {
+      "id": 8,
+      "companyId": 4,
+      "activationDateTime": "2024-12-15T16:00:00Z",
+      "billingCycle": "Custom",
+      "fiscalDocuments": ["NfseZip"]
+    },
+    {
+      "id": 9,
+      "companyId": 5,
+      "activationDateTime": "2024-09-20T14:30:00Z",
+      "billingCycle": "Quinzenal",
+      "fiscalDocuments": ["CteZip", "NfseZip"]
+    },
+    {
+      "id": 10,
+      "companyId": 5,
+      "activationDateTime": "2024-12-22T13:00:00Z",
+      "billingCycle": "Mensal",
+      "fiscalDocuments": ["InvoiceReport"]
+    },
+    {
+      "id": 11,
+      "companyId": 6,
+      "activationDateTime": "2024-08-30T11:00:00Z",
+      "billingCycle": "Custom",
+      "fiscalDocuments": ["NfseZip", "CteZip"]
+    },
+    {
+      "id": 12,
+      "companyId": 6,
+      "activationDateTime": "2024-12-25T12:00:00Z",
+      "billingCycle": "Quinzenal",
+      "fiscalDocuments": ["InvoiceReport"]
+    },
+    {
+      "id": 13,
+      "companyId": 7,
+      "activationDateTime": "2024-10-05T08:00:00Z",
+      "billingCycle": "Mensal",
+      "fiscalDocuments": ["CteZip", "InvoiceReport"]
+    },
+    {
+      "id": 14,
+      "companyId": 7,
+      "activationDateTime": "2024-12-28T17:00:00Z",
+      "billingCycle": "Custom",
+      "fiscalDocuments": ["NfseZip"]
+    },
+    {
+      "id": 15,
+      "companyId": 8,
+      "activationDateTime": "2024-09-12T09:15:00Z",
+      "billingCycle": "Quinzenal",
+      "fiscalDocuments": ["InvoiceReport"]
+    },
+    {
+      "id": 16,
+      "companyId": 8,
+      "activationDateTime": "2024-12-03T10:00:00Z",
+      "billingCycle": "Mensal",
+      "fiscalDocuments": ["NfseZip", "CteZip"]
+    },
+    {
+      "id": 17,
+      "companyId": 9,
+      "activationDateTime": "2024-07-15T07:30:00Z",
+      "billingCycle": "Custom",
+      "fiscalDocuments": ["CteZip", "NfseZip"]
+    },
+    {
+      "id": 18,
+      "companyId": 9,
+      "activationDateTime": "2024-11-30T15:45:00Z",
+      "billingCycle": "Quinzenal",
+      "fiscalDocuments": ["InvoiceReport"]
+    },
+    {
+      "id": 19,
+      "companyId": 10,
+      "activationDateTime": "2024-10-10T10:45:00Z",
+      "billingCycle": "Mensal",
+      "fiscalDocuments": ["InvoiceReport", "CteZip"]
+    },
+    {
+      "id": 20,
+      "companyId": 10,
+      "activationDateTime": "2024-12-29T18:30:00Z",
+      "billingCycle": "Custom",
+      "fiscalDocuments": ["NfseZip"]
+    }
+  ]
+}

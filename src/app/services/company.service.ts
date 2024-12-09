@@ -2,19 +2,19 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { map, Observable, of } from "rxjs";
 import { InputValidator } from "../helpers/utils";
-import { type Company } from "../pages/invoice-configuration-view/invoice-configuration.model";
+import { type Company } from "../pages/invoice-config/invoice-configuration-view/invoice-configuration.model";
 
 @Injectable({providedIn: 'root'})
 export class CompanyService {
-    url = "http://localhost:3000"
+    url = "http://localhost:3000/companies"
     constructor(private client: HttpClient) {
     }
     getCompanyById(companyId: number): Observable<Company> {
-        return this.client.get<Company>(`${this.url}/companies/?id=${companyId}`);
+        return this.client.get<Company>(`${this.url}/?id=${companyId}`);
     }
 
-    getCompanyByCnpj(cnpj: string): Observable<Company[]> { // Json-server only treats ID as unique so returns a list
-        return this.client.get<Company[]>(`${this.url}/companies/?cnpj=${cnpj}`); 
+    getCompanyByCnpj(cnpj: string): Observable<Company[]> {
+        return this.client.get<Company[]>(`${this.url}/?cnpj=${cnpj}`);
     }
 
     getCompanyId(input: string): Observable<number | string> {
@@ -22,7 +22,7 @@ export class CompanyService {
             let cleanedCnpj = input.replace(/\D/g, '');
             return this.getCompanyByCnpj(cleanedCnpj).pipe(
                 map((companies) => companies.length > 0 ? Number(companies[0].id) : `No Company with this cnpj: ${input}`)
-            );          
+            );
         }
         else if (InputValidator.isValidCompanyId(input)) {
             return of(Number(input));

@@ -1,4 +1,5 @@
 export interface InvoiceConfiguration {
+    id: number;
     companyId: number;
     activationDateTime: Date;
     billingCycle: BillingCycle;
@@ -6,6 +7,7 @@ export interface InvoiceConfiguration {
 }
 
 export interface  InvoiceConfigData {
+    id: string;
     companyId: string;
     activationDateTime: string;
     billingCycle: string;
