@@ -22,7 +22,6 @@ export class ClientConfigComponent implements OnInit {
   ngOnInit(): void {
     // Carregar empresas
     this.invoiceConfigService.getInvoiceConfigurationById(Number(this.configId)).subscribe(configData => {
-      debugger
       this.config = configData.map(data => new InvoiceConfigurationMapper(data).toObject())[0];
     });
 
