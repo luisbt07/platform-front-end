@@ -1,7 +1,7 @@
-import { FormsModule } from '@angular/forms';
-import { ClientConfigService } from './../../services/client-config.service';
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { ClientConfigService } from '../../../services/client-config.service';
 
 @Component({
   selector: 'app-client-config',

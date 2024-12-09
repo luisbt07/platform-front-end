@@ -2,7 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { map, Observable, of } from "rxjs";
 import { InputValidator } from "../helpers/utils";
-import { type Company } from "../pages/invoice-configuration-view/invoice-configuration.model";
+import { type Company } from "../pages/invoice-config/invoice-configuration-view/invoice-configuration.model";
 
 @Injectable({providedIn: 'root'})
 export class CompanyService {
@@ -10,11 +10,11 @@ export class CompanyService {
     constructor(private client: HttpClient) {
     }
     getCompanyById(companyId: number): Observable<Company> {
-        return this.client.get<Company>(`${this.url}/companies/?id=${companyId}`);
+        return this.client.get<Company>(`${this.url}/?id=${companyId}`);
     }
 
     getCompanyByCnpj(cnpj: string): Observable<Company[]> {
-        return this.client.get<Company[]>(`${this.url}/companies/?cnpj=${cnpj}`);
+        return this.client.get<Company[]>(`${this.url}/?cnpj=${cnpj}`);
     }
 
     getCompanyId(input: string): Observable<number | string> {

@@ -1,13 +1,13 @@
-import { CommonModule, DatePipe } from '@angular/common';
+import { DatePipe } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { of, switchMap } from 'rxjs';
-import { SideBarMenuComponent } from "../../layout/side-bar-menu/side-bar-menu.component";
-import { CompanyService } from '../../services/company.service';
-import { InvoiceConfigurationService } from '../../services/invoice-configuration.service';
+import { SideBarMenuComponent } from "../../../layout/side-bar-menu/side-bar-menu.component";
+import { CompanyService } from '../../../services/company.service';
+import { InvoiceConfigurationService } from '../../../services/invoice-configuration.service';
 import { InvoiceConfigurationMapper } from './invoice-configuration-class';
 import { InvoiceConfigData, InvoiceConfiguration } from './invoice-configuration.model';
-import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-invoice-configuration',

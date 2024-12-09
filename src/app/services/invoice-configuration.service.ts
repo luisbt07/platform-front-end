@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { map, Observable } from "rxjs";
-import { type InvoiceConfiguration } from "../pages/invoice-configuration-view/invoice-configuration.model";
+import { type InvoiceConfiguration } from "../pages/invoice-config/invoice-configuration-view/invoice-configuration.model";
 
 @Injectable({providedIn: 'root'})
 export class InvoiceConfigurationService {
