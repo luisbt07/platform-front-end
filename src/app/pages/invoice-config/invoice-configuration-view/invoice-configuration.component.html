@@ -39,7 +39,7 @@
                       {{config.fiscalDocuments.length == $index + 1 ? doc : doc + " | "}}
                   }
                 </td>
-                <td><button [routerLink]="'/app/invoice-configuration/client-config'" class="btn">✏️</button></td>
+                <td><button [routerLink]="['/app/invoice-configuration/edit', config.id]" class="btn">✏️</button></td>
           </tr>
         }
         </tbody>

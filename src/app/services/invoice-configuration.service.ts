@@ -5,7 +5,7 @@ import { type InvoiceConfiguration } from "../pages/invoice-config/invoice-confi
 
 @Injectable({providedIn: 'root'})
 export class InvoiceConfigurationService {
-    url = "http://localhost:3000"
+    url = "http://localhost:3000/invoiceConfigurations"
     constructor(private client: HttpClient) {
     }
 
@@ -20,9 +20,14 @@ export class InvoiceConfigurationService {
             }),
         )
     }
+    
 
     retrieveInvoiceConfigsByCompanyId(companyId: number): Observable<InvoiceConfiguration[]> {
-        return this.client.get<InvoiceConfiguration[]>(`${this.url}/invoiceConfigurations/?companyId=${companyId}`);
+        return this.client.get<InvoiceConfiguration[]>(`${this.url}/?companyId=${companyId}`);
+    }
+
+    getInvoiceConfigurationById(id: number): Observable<InvoiceConfiguration[]> {
+        return this.client.get<InvoiceConfiguration[]>(`${this.url}/?id=${id}`);
     }
 
 }

@@ -16,7 +16,7 @@ export const routes: Routes = [
       { path: 'report', component: ReportComponent },
       {path: 'invoice-configuration', component: InvoiceConfigurationComponent,
         children: [
-          { path: 'client-config', component: ClientConfigComponent }
+          { path: 'edit/:configId', component: ClientConfigComponent }
         ]
       }
     ]

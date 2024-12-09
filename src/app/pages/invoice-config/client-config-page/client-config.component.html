@@ -1,57 +1,61 @@
 <div class="content">
+  @if(config) {
   <div class="modal modal-sheet position-static d-block p-4 py-md-5" tabindex="-1" role="dialog" id="modalSheet" style="z-index: 1050;">
     <div class="modal-dialog" role="document">
       <div class="modal-content rounded-4 shadow">
-        <div class="modal-header border-bottom-0">
-          <h1 class="modal-title fs-5">Configuração do Cliente</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
+        
+          <div class="modal-header border-bottom-0">
+            <h1 class="modal-title fs-5">Configuração do Cliente</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
 
-        <div class="modal-body py-0">
-          <form>
-            <div class="mb-3">
-              <label for="clientName" class="form-label">Nome do Cliente</label>
-              <!-- <input type="text" class="form-control" id="clientName" [value]="companies.find(c => c.id === selectedCompanyId)?.name" readonly> -->
-            </div>
-            <div class="mb-3">
-              <label for="clientCNPJ" class="form-label">CNPJ</label>
-              <!-- <input type="text" class="form-control" id="clientCNPJ" [value]="companies.find(c => c.id === selectedCompanyId)?.cnpj" readonly> -->
-            </div>
-            <div class="mb-3">
-              <label for="billingCycle" class="form-label">Ciclo de Faturamento</label>
-              <select class="form-select" id="billingCycle" [(ngModel)]="config.billingCycle">
-                <option value="mensal">Mensal</option>
-                <option value="quinzenal">Quinzenal</option>
-                <option value="custom">Custom</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="docsRequested" class="form-label">Documentos Solicitados</label>
-              <div>
-                <input type="checkbox" class="form-check-input" id="docsRequestedInvoice"> <!-- [(ngModel)]="config.fiscalDocuments.includes('InvoiceReport')"> -->
-                <label class="form-check-label" for="docsRequestedInvoice">InvoiceReport</label>
+          <div class="modal-body py-0">
+            <form>
+              <div class="mb-3">
+                <label for="companyId" class="form-label">CompanyId {{config.companyId}}</label>
+                <!-- <input type="text" class="form-control" id="clientName" [value]="companies.find(c => c.id === selectedCompanyId)?.name" readonly> -->
               </div>
-              <div>
-                <input type="checkbox" class="form-check-input" id="docsRequestedCte"> <!-- [(ngModel)]="config.fiscalDocuments.includes('CteZip')"> -->
-                <label class="form-check-label" for="docsRequestedCte">CteZip</label>
+              <!-- <div class="mb-3">
+                <label for="clientCNPJ" class="form-label">CNPJ</label> -->
+                <!-- <input type="text" class="form-control" id="clientCNPJ" [value]="companies.find(c => c.id === selectedCompanyId)?.cnpj" readonly> -->
+              <!-- </div> -->
+              <div class="mb-3">
+                <label for="billingCycle" class="form-label">Ciclo de Faturamento</label>
+                <select class="form-select" id="billingCycle" name="billingCycle" [(ngModel)]="config.billingCycle">
+                  <option value="mensal">Mensal</option>
+                  <option value="quinzenal">Quinzenal</option>
+                  <option value="custom">Custom</option>
+                </select>
               </div>
-              <div>
-                <input type="checkbox" class="form-check-input" id="docsRequestedNfse"> <!-- [(ngModel)]="config.fiscalDocuments.includes('NfseZip')-->
-                <label class="form-check-label" for="docsRequestedNfse">NfseZip</label>
+              <div class="mb-3">
+                <label for="docsRequested" class="form-label">Documentos Solicitados</label>
+                <div>
+                  <input type="checkbox" class="form-check-input" id="docsRequestedInvoice"> <!-- [(ngModel)]="config.fiscalDocuments.includes('InvoiceReport')"> -->
+                  <label class="form-check-label" for="docsRequestedInvoice">InvoiceReport</label>
+                </div>
+                <div>
+                  <input type="checkbox" class="form-check-input" id="docsRequestedCte"> <!-- [(ngModel)]="config.fiscalDocuments.includes('CteZip')"> -->
+                  <label class="form-check-label" for="docsRequestedCte">CteZip</label>
+                </div>
+                <div>
+                  <input type="checkbox" class="form-check-input" id="docsRequestedNfse"> <!-- [(ngModel)]="config.fiscalDocuments.includes('NfseZip')-->
+                  <label class="form-check-label" for="docsRequestedNfse">NfseZip</label>
+                </div>
               </div>
-            </div>
-            <div class="mb-3">
-              <label for="validFrom" class="form-label">Válido a partir de</label>
-              <input type="date" class="form-control" id="validFrom" [(ngModel)]="config.validFrom">
-            </div>
-          </form>
-        </div>
+              <div class="mb-3">
+                <label for="validFrom" class="form-label">Válido a partir de</label>
+                <input type="date" class="form-control" id="activationDateTime" name="activationDateTime" [(ngModel)]="config.activationDateTime">
+              </div>
+            </form>
+          </div>
 
         <div class="modal-footer flex-column align-items-stretch w-100 gap-2 pb-3 border-top-0">
-          <button type="button" class="btn btn-lg btn-primary" (click)="saveConfig()">Salvar configurações</button>
+          <!-- <button type="button" class="btn btn-lg btn-primary" (click)="saveConfig()">Salvar configurações</button> -->
           <button type="button" class="btn btn-secondary" [routerLink]="['/app/invoice-configuration']" data-bs-dismiss="modal">Fechar</button>
         </div>
+        
       </div>
     </div>
   </div>
+}
 </div>
